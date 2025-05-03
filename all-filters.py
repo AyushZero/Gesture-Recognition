@@ -40,7 +40,7 @@ while True:
 
     frame = cv2.flip(frame, 1)
     frame_copy = frame.copy()
-    cv2.rectangle(frame_copy, (ROI_X1, ROI_Y1), (ROI_X2, ROI_X2), RECT_COLOR, 2)
+    cv2.rectangle(frame_copy, (ROI_X1, ROI_Y1), (ROI_X2, ROI_Y2), RECT_COLOR, 2)
     roi = frame[ROI_Y1:ROI_Y2, ROI_X1:ROI_X2].copy()
 
     hsv = cv2.cvtColor(roi, cv2.COLOR_BGR2HSV)
